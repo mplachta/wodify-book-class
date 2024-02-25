@@ -1,3 +1,5 @@
-login = "YOUR LOGIN"
-password = "YOUR PASSWORD"
-class_name = "CLASS NAME"
+"""Configuration file"""
+
+LOGIN = "YOUR LOGIN"
+PASSWORD = "YOUR PASSWORD"
+CLASS_NAME = "CLASS NAME"

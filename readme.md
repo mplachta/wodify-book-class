@@ -29,5 +29,5 @@ brew install chromedriver
 Set up your Crontab to the desired schedule and run the script using
 
 ```
-python3 book-class.py
+python3 book_class.py
 ```
