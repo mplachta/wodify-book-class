@@ -81,7 +81,7 @@ try:
 
     reserve_class_button = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located(
-            (By.XPATH, f"//span[contains(@title,'{CLASS_NAME}')]/ancestor::tr//a[contains(@title, 'Reserve')]"))
+            (By.XPATH, f"//span[contains(@title,'{CLASS_NAME}')]/ancestor::tr//a[contains(@title, 'Reserv')]"))
     )
 
     reserve_class_button.click()
@@ -92,5 +92,9 @@ try:
     )
 
     print("Confirmation message: ", confirmation_message.text)
+    log_line = f"{date.today()}: (For Saturday {nearest_sat_date}): {confirmation_message.text}"
+
+    with open("execution.log", "a") as file:
+        file.write(log_line + "\n")
 finally:
     driver.quit()
